@@ -1,0 +1,101 @@
+/* 1px解决方案 */
+.mix-1px (@top, @right, @bottom, @left, @color:@defaultBg) {
+  position: relative;
+  @scale: 2;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% * @scale;
+    height: 100% * @scale;
+    border: 0 @color solid;
+    box-sizing: border-box;
+    transform-origin: 0 0;
+    transform: scale(1 / @scale);
+    pointer-events: none;
+    z-index: 0;
+
+    & when (@top > 0) {
+      border-top-width: 1px;
+    }
+
+    & when (@right > 0) {
+      border-right-width: 1px;
+    }
+
+    & when (@bottom > 0) {
+      border-bottom-width: 1px;
+    }
+
+    & when (@left > 0) {
+      border-left-width: 1px;
+    }
+  }
+}
+
+/* 清除1px */
+.mix-1px-clear () {
+  &:before {
+    display: none;
+  }
+}
+
+/* 垂直居中 */
+.flex-y-center () {
+  display: flex;
+  align-items: center;
+}
+
+/* 水平居中 */
+.flex-x-center () {
+  display: flex;
+  justify-content: center;
+}
+
+/* 水平垂直居中 */
+.flex-center () {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 超出部分出省略号 */
+.text-overflow () {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 多行文本超出部分省略号 */
+.ellipsis-line(@line:2) {
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:@line;
+  overflow:hidden;
+}
+
+/*页面滚动*/
+.overflow-auto(){
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0 !important
+  }
+}
+// 扩展点击区域
+.extend-click() {
+  position: relative;
+  &:before {
+     content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+   
+}
+  

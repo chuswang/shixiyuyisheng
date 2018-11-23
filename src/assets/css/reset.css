@@ -1,0 +1,47 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: hidden!important;
+    -webkit-text-size-adjust: 100% !important;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+    -webkit-overflow-scrolling: touch;
+}
+#app,.application--wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+}
+ul{padding: 0;margin: 0}
+*{
+    padding: 0;margin: 0;
+    word-break: break-all;
+    white-space: normal;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+input,button,textarea{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border:none;
+}
+
+img {
+    vertical-align: top;
+    border: none;
+}

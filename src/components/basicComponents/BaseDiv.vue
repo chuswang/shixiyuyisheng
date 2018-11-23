@@ -1,13 +1,13 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+	这是使用全局注册的基础组件
   </div>
 </template>
 
 
 <script>
   export default {
-  	name : 'about',
+
   }
 </script>
 
