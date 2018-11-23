@@ -24,36 +24,37 @@ export default {
       type: Function
     }
   },
-  data () {
+  data() {
     return {
       show: false,
       title: '',
       content: '',
       cancelText: '',
       confirmText: ''
-    }
+    };
   },
-  computed: {
-  },
+  computed: {},
   methods: {
-    onOpen () {
-      this.show = true
+    onOpen() {
+      this.show = true;
     },
-    onCancel () {
-      this.show = false
+    onCancel() {
+      this.show = false;
     },
-    confirmEvent () {
-      this.onCancel()
-      if (this.confirm) { this.confirm() }
+    confirmEvent() {
+      this.onCancel();
+      if (this.confirm) {
+        this.confirm();
+      }
     },
-    cancelEvent () {
-      this.onCancel()
-      if (this.cancel) { this.cancel() }
+    cancelEvent() {
+      this.onCancel();
+      if (this.cancel) {
+        this.cancel();
+      }
     }
-
   }
-}
-
+};
 </script>
 
 <style lang="less">
@@ -61,23 +62,23 @@ export default {
 
 .app_confirm {
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  overflow-y:hidden ;
+  overflow-y: hidden;
   z-index: @player_loading;
   display: flex;
   align-items: center;
   justify-content: center;
-  .app_confirm_mask{
+  .app_confirm_mask {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .app_confirm_card {
     position: relative;

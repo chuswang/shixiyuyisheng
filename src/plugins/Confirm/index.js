@@ -1,4 +1,4 @@
-import temp from './index.vue'
+import temp from './index.vue';
 
 /*
 * 参数都是非必穿的
@@ -15,32 +15,37 @@ import temp from './index.vue'
    cancel () { console.log('取消') }
  })
 * */
-const install = function (Vue) {
-  const Control = Vue.extend(temp)
-  const instance = new Control()
-  let dom = document.createElement('div')
-  instance.$mount(dom)
-  document.body.appendChild(instance.$el)
+const install = function(Vue) {
+  const Control = Vue.extend(temp);
+  const instance = new Control();
+  let dom = document.createElement('div');
+  instance.$mount(dom);
+  document.body.appendChild(instance.$el);
   Vue.prototype.$Confirm = {
-    open (obj = {}) {
-      let { title = '', content = '', cancelText = '取消', confirmText = '确认' } = obj
+    open(obj = {}) {
+      let {
+        title = '',
+        content = '',
+        cancelText = '取消',
+        confirmText = '确认'
+      } = obj;
 
-      instance.title = title
-      instance.content = content
-      instance.cancelText = cancelText
-      instance.confirmText = confirmText
+      instance.title = title;
+      instance.content = content;
+      instance.cancelText = cancelText;
+      instance.confirmText = confirmText;
 
-      instance.$props.confirm = obj.confirm
-      instance.$props.cancel = obj.cancel
+      instance.$props.confirm = obj.confirm;
+      instance.$props.cancel = obj.cancel;
 
-      instance.onOpen()
+      instance.onOpen();
     },
-    cancel () {
-      instance.cancelEvent()
+    cancel() {
+      instance.cancelEvent();
     }
-  }
-}
+  };
+};
 
 export default {
   install
-}
+};

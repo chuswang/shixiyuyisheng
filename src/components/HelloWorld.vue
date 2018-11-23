@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: 'HelloWorld',
   props: {
     msg: String
   }
@@ -42,7 +42,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style  lang="less">
 h3 {
-  color:@base-color2;
+  color: @base-color2;
   margin: 40px 0 0;
 }
 ul {
