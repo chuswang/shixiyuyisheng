@@ -35,6 +35,13 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted() {
+    setTimeout(()=>{
+    this.$toast({
+      tips:'tips'
+    });
+    },2000)
   }
 };
 </script>

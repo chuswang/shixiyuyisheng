@@ -4,11 +4,12 @@ import router from './router';
 import store from './store';
 import ajaxConfig from './request/ajaxConfig';
 import './assets/css/reset.css';
-
+import Toast from './plugins/Confirm/index.js';
 Vue.config.productionTip = false;
 
 Vue.prototype.$http = ajaxConfig.ajax;
 
+Vue.use(Toast);
 /*全局注册基础组件*/
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
