@@ -5,6 +5,10 @@ import store from './store';
 import ajaxConfig from './request/ajaxConfig';
 import './assets/css/reset.css';
 import Toast from './plugins/Confirm/index.js';
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+
+Vue.use(MintUI)
 Vue.config.productionTip = false;
 
 Vue.prototype.$http = ajaxConfig.ajax;
