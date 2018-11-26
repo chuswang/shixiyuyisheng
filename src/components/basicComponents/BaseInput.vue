@@ -49,7 +49,7 @@ export default {
     right: 10px;
     top: 0;
     cursor: default;
-    .extend-click();
+    // .extend-click();
   }
 
 }

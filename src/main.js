@@ -6,7 +6,11 @@ import ajaxConfig from './request/ajaxConfig';
 import './assets/css/reset.css';
 import Toast from './plugins/Confirm/index.js';
 import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
+import 'mint-ui/lib/style.css';
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 
 Vue.use(MintUI)
 Vue.config.productionTip = false;
